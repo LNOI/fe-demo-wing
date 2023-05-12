@@ -1,0 +1,24 @@
+.images_diff{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    
+}
+
+.images_src{
+    width: 100px;
+    height: 100px;
+}
+
+.rewrite_essay{
+    display:flex;
+    justify-content: center;
+    justify-items: center;
+    /* justify-items: center; */
+    flex-direction: column;
+}
+.textarea_rewrite{
+    margin: auto;
+    width: 50%;
+}
+
