@@ -1,20 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
-import Essay from './components/Essay/Essay';
-import StableDiffusion from './components/Essay/StableDiffusion';
 import { useState } from 'react';
+import Login from './components/Login/Login';
+import Document from './components/Documents/Document';
+import Content from './components/Content/Content';
+import Employee from './components/Employee/Employee';
 
 function App() {
-  const [page,setPage] = useState(0)
+  const [page,setPage] = useState(1)
   return (
-    
-    <div className="App">
+    <>
       {
-        page ===0 ? <Essay setPage={setPage}></Essay> : <StableDiffusion setPage={setPage}></StableDiffusion>
+        page ===1 ? <Login setPage={setPage}></Login>:null
       }
-    
-    </div>
-  );
+      <Document setPage={setPage}></Document>
+      {
+        page ===2 ? <>
+        <Content></Content>
+        {/* <Employee></Employee> */}
+        </>:null
+      }
+      {
+        page ===3 ? <>
+        <Employee></Employee>
+        </>:null
+      }
+     
+    </>
+  )
 }
 
 export default App;
